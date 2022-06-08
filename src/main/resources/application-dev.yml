@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: image-api
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: guest
+    password: guest
+    connection-timeout: 6000
+
+management:
+  endpoint:
+    health:
+      probes:
+        enabled: true
+  health:
+    livenessstate:
+      enabled: true
+    readinessstate:
+      enabled: true
+
+server:
+  port: 8220
+  servlet:
+    context-path: /image
+
+logging:
+  level:
+    com.pragma: DEBUG
